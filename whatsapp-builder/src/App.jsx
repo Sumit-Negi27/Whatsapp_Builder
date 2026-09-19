@@ -1,9 +1,20 @@
+import { Routes, Route } from 'react-router-dom'
+import Layout from './components/Layout'
+import Dashboard from './pages/Dashboard'
+import BusinessProfile from './pages/BusinessProfile'
+import Products from './pages/Products'
+
+
 
 function App() {
   return (
-    <h1 className="text-3xl font-bold text-green-600">
-      Tailwind is working!
-    </h1>
+    <Layout>
+      <Routes>
+        <Route path="/" element={<Dashboard />} />
+        <Route path="/profile" element={<BusinessProfile />} />
+        <Route path="/products" element={<Products />} />
+      </Routes>
+    </Layout>
   )
 }
 
